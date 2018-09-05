@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>   <%= content_for?(:title) ? yield(:title) : "Midaster - Online Home Tutors, Students and Teachers Network" %>  </title>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">  
+  <%= stylesheet_link_tag    "/assets/bootstrap.min", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "/assets/jQuery.alert", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "/assets/custom", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "/assets/joinclassstyle", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "/assets/main-responsive", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "/assets/jquery-1.11.3.min", "data-turbolinks-track" => true %> 
+  <%= javascript_include_tag "/assets/bootstrap.min", "data-turbolinks-track" => true %>  
+
+  <%= csrf_meta_tags %>
+  
+  
+  <script type="text/javascript">
+    var base_url = window.location.origin;
+  </script>
+ 
+</head>
+<body>
+
+<div class="bottomcontent">
+  <div class="container">
+    <div class="row">
+
+      <%= yield %>
+
+      </div>
+  </div>
+</div>
+
+</body>
+</html>

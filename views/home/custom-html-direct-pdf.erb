@@ -1,0 +1,14 @@
+<% 
+html = <<-ENDHTML
+  
+  <h2>Testing </h2>
+
+ENDHTML
+
+
+kit = PDFKit.new(html) 
+
+ 
+kit.to_file("public/assets/resultspdf/result_#{user_id}_#{test_id}.pdf")
+
+%>
